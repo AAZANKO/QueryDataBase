@@ -22,7 +22,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -46,7 +45,7 @@ public class DataBaseDaoImpl implements DataBaseDao {
             }
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             return false;
         }
     }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Конвертация строки</title>
+        <link rel="stylesheet" th:href="@{/css/signin.css}"/>
+    </head>
+    <body>
+        <div class="container">
+            <h3 style="color: darkgreen">Введите координаты для конвертации</h3>
+            <form th:action="@{/ConvertString}" method="post">
+                    <textarea autofocus rows="12" cols="120" name="coordinates" placeholder="27169.574 13226.337,27163.904 13227.945,27163.115 13225.162,27168.784 13223.554,27169.574 13226.337" ></textarea>
+                    <input class="button21" type="submit" value="Конвертировать">
+            </form>
+        </div>
+        <div class="container" th:if="${coordinate1 != null}">
+            <h3 style="color: darkgreen">Результат: Mercator (Google)</h3>
+            <textarea rows="12" cols="120" th:text="${coordinate1}" readonly></textarea>
+        </div>
+        <div class="container" th:if="${coordinate2 != null}">
+            <h3 style="color: darkgreen" th:text="${srid}"></h3>
+            <textarea rows="12" cols="120" th:text="${coordinate2}" readonly></textarea>
+        </div>
+        <div class="container" th:if="${message != null}">
+            <h1 style="color: brown"  th:text="${message}"></h1>
+        </div>
+        <div class="container" th:if="${messageNull != null}">
+            <h1 style="color: brown"  th:text="${messageNull}"></h1>
+        </div>
+        <hr>
+        <div>
+            <form th:action="@{/UploadFile}" method="GET">
+                <input class="button22" type="submit" value="<< Перейти к конвертации файлов">
+            </form>
+        </div>
+    </body>
+</html>

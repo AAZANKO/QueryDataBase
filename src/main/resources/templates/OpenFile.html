@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Файлы для конвертации</title>
+        <link rel="stylesheet" th:href="@{/css/signin.css}"/>
+    </head>
+    <body>
+        <div class="container">
+            <h3 style="color: darkgreen">Выберите файлы для конвертации</h3>
+            <form th:action="@{/UploadFile}" enctype="multipart/form-data" method="post">
+                <p><input type="file" name="files" multiple ></p>
+                <p><input class="button21" type="submit" value="Конвертировать"></p>
+            </form>
+            <br>
+            <div th:if="${message != null}">
+                <h1 style="color: brown"  th:text="${message}"></h1>
+            </div>
+            <div th:if="${messageTrue != null}">
+                <h1 style="color: darkgreen"  th:text="${messageTrue}"></h1>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <form th:action="@{/ConvertString}" method="GET">
+                <input class="button22" type="submit" value="Перейти к конвертации из строки >>">
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+!table
+!version 300
+!charset WindowsCyrillic
+
+Definition Table
+  File "4635.jpg"
+  Type "Raster"
+  (35000.00,47000.00) (0,0) Label "UpLeft",
+  (36000.00,47000.00) (8000.00,0) Label "UpRight",
+  (36000.00,46000.00) (8000.00,8000.00) Label "DownRight",
+  (35000.00,46000.00) (0,8000.00) Label "DownLeft"
+  CoordSys Earth Projection 0, 7
+  Units "m"

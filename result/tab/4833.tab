@@ -1,0 +1,13 @@
+!table
+!version 300
+!charset WindowsCyrillic
+
+Definition Table
+  File "4833.jpg"
+  Type "Raster"
+  (14209940,6547910) (14158380.00,6470990.00) Label "UpLeft",
+  (14211510,6547900) (80014158380.00,6470990.00) Label "UpRight",
+  (14211510,6546330) (14170810.00,6483530.00) Label "DownRight",
+  (14209940,6546330) (0,8000) Label "DownLeft"
+  CoordSys Earth Projection 0, 7
+  Units "m"

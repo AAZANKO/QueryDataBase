@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Подключение к базе данных</title>
+    <link rel="stylesheet" th:href="@{/css/signin.css}"/>
+</head>
+    <body>
+        <header></header>
+        <div class="container">
+            <h3 style="color: darkgreen">Проверьте правильность заполнения конфигурационного файла</h3>
+            <div>
+                <form id="forma" th:action="@{/ConnectToDatabase}" th:method="post">
+                    URL:
+                    <input id="url" type="text" name="url" th:value="${url}" readonly /><br/>
+                    Username:
+                    <input id="login" type="text" name="login" th:value="${login}" readonly /><br/>
+                    Password:
+                    <input id="password" type="text" name="password" th:value="${password}" readonly/><br/>
+                    ether coefficient:
+                    <input id="ether" type="text" name="ether" th:value="${ether}" readonly/><br/>
+                    SRID:
+                    <input id="srid" type="text" name="srid" th:value="${srid}" readonly/><br/>
+                    <input class="button21" id="submit" th:type="submit" th:value="Connect" />
+                </form>
+            </div>
+<!--            <div>-->
+<!--                <form id="forma" th:action="@{/ConnectToDatabase}" th:method="post" th:object="${configur}">-->
+<!--                    URL:-->
+<!--                    <input id="url" type="text" name="url" th:field="*{url}" value="${url}" readonly/><br/>-->
+<!--                    Username:-->
+<!--                    <input id="login" type="text" name="login" th:field="*{login}"value="${login}" readonly/><br/>-->
+<!--                    Password:-->
+<!--                    <input id="password" type="text" name="password" th:field="*{password}" value="${password}" readonly/><br/>-->
+<!--                    ether coefficient:-->
+<!--                    <input id="ether" type="text" name="ether" th:field="*{ether}" value="${ether}" readonly/><br/>-->
+<!--                    SRID:-->
+<!--                    <input id="srid" type="text" name="srid" th:field="*{srid}" value="${srid}" readonly/><br/>-->
+<!--                    <input class="button21" id="submit" th:type="submit" th:value="Connect" />-->
+<!--                </form>-->
+<!--            </div>-->
+        </div>
+        <div th:if="${message != null}">
+            <h1 style="color: brown"  th:text="${message}"></h1>
+        </div>
+        <!--        <div th:if="${dataBaseEntity != null}">-->
+<!--            <span th:text="${dataBaseEntity}"></span>-->
+<!--        </div>-->
+<!--        <br>-->
+<!--        <div>-->
+<!--            <form th:action="@{/UploadFile}" enctype="multipart/form-data" method="post">-->
+<!--                <p>Загрузите ваши файлы на сервер</p>-->
+<!--                <p><input type="file" name="files" multiple ></p>-->
+<!--                <p><input type="submit" value="Отправить"></p>-->
+<!--            </form>-->
+<!--        </div>-->
+        <footer></footer>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+project:
+  config:
+    url: jdbc:postgresql://255.222.255.20:5432/postgres
+    login: ggggggggggg
+    password: YYYYYYYYYYYYYYY
+    ether: 1.000002648,0.003154800,-0.003153514,1.000008775,3262052.263422772,440288.905865616
+    srid: 4326
+
